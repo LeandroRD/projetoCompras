@@ -11,7 +11,10 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings, Configurações do servidor
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+
+
+    // Esta area faz aparecer todo o processo de email na pagina (this area displays the entire email process on the page)
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -31,7 +34,22 @@ try {
    
 
     $mail->send();
-    echo 'Message has been sent';
+   
+    echo 'E-mail enviado com sucesso!!!!';
+    
+    // session_destroy();
+    
+
+    // die();
+    // exit;
+    
+    
+    
+    
+    
+    
+    
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+

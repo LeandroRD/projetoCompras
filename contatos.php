@@ -36,11 +36,29 @@
                     //envio de email
                     if(empty($erro)){                       
                         /////comeco
+                       // Header('Location: index.php');
+                        
                         include('enviar_email.php');
+                        echo'ok';
+                        // include('contatos.php');
+                        // session_destroy();
+                        
+                        
+                        // header('Location: index.php');
+                        // header('Location: http://www.google.com.br');
+                        // die();
+                       
+                       
+                        
+                        // if($_POST['formulario']=='teste'){
+                        //     die('login com sucesso');
+                        // }
                     
                     }  
-    
+                    // die();
+                    
                 }
+                
     //=============================================================
     //Açao se  input type 'formulario' for  value="newsletter" 
     if($_POST['formulario']=='newsletter'){
@@ -68,9 +86,18 @@
         }
     } 
     //=============================================================
-    
+   
+    // if($_POST['formulario']=='teste22'){
+        
+    //     die('    teste die');
+    // }
+
     }  
-    // ==========================PHP FIM====================================  
+    // ==========================PHP FIM==================================== 
+   
+    
+
+     
     ?>
 
   
@@ -128,10 +155,22 @@
                             <textarea name="text_mensagem"  cols="60" rows="3" class="form-control" required></textarea>
                     </div>
                     <div class="text-center">
+                            
+                             
                             <input type="submit" value="Enviar mensagem" class="btn btn-primary"> 
-                    </div>
+                            
+                        </div>
             
         </form>
+        <!-- //======================================================= -->
+        <form action="?p=contatos" method="post" >
+ 
+                <div class="text-center">
+                         <!-- <input type="hidden" name="formulario" value="teste22">
+                        <input type="submit" value="agora" class="btn btn-primary" > -->
+                    </div>  
+                </form>
+        <!-- //======================================================= -->
       
         <div class="row"style="margin-bottom: 150px">
             <div class="offset-0 col-12">
@@ -145,6 +184,7 @@
                         <input type="email" name="text_email"class="form-control" placeholder="Email" required>
                     </div>  
                     <div class="text-center">
+                        <!-- /////////////////////// -->
                         <input type="submit" value="Receber newsletter" class="btn btn-primary" >
                     </div>
                     
@@ -153,6 +193,7 @@
             </div>
         </div>   
     </div>
+    
 
 
 
