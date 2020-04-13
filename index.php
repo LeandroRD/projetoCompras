@@ -47,6 +47,11 @@ if (isset($_GET['p'])){
          include('contatos.php');
           break;
 
+    case 'cadastro':
+        include('criar_usuario.php');             
+         break;
+
+
     case 'area_reservada':
      //verifica se houve submissao de formulario
          $erro=false;
