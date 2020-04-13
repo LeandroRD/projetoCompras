@@ -63,6 +63,7 @@
     //Açao se  input type 'formulario' for  value="newsletter" 
     if($_POST['formulario']=='newsletter'){
             $email=$_POST['text_email'];
+            
             include 'gestor.php';
             $gestor = new gestor();
     //-----------------------------------------------------------------        
