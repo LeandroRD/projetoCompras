@@ -35,28 +35,9 @@
     //-----------------------------------------------------------------  
                     //envio de email
                     if(empty($erro)){                       
-                        /////comeco
-                       // Header('Location: index.php');
-                        
                         include('enviar_email.php');
                         echo'ok';
-                        // include('contatos.php');
-                        // session_destroy();
-                        
-                        
-                        // header('Location: index.php');
-                        // header('Location: http://www.google.com.br');
-                        // die();
-                       
-                       
-                        
-                        // if($_POST['formulario']=='teste'){
-                        //     die('login com sucesso');
-                        // }
-                    
-                    }  
-                    // die();
-                    
+                    }     
                 }
                 
     //=============================================================
@@ -82,30 +63,14 @@
                 //email novo
             //inserir novo email na base de dados
             $gestor->EXE_NON_QUERY('INSERT INTO emails(email) VALUES(:seguranca)',$params);
-            $sucesso_newsletter='Obrigado por ter registrado o seu e-mail';
-            
+            $sucesso_newsletter='Obrigado por ter registrado o seu e-mail';    
         }
     } 
-    //=============================================================
-   
-    // if($_POST['formulario']=='teste22'){
-        
-    //     die('    teste die');
-    // }
+    
 
     }  
     // ==========================PHP FIM==================================== 
-   
-    
-
-     
     ?>
-
-  
-
-
-    
-    
     <!--o ====================== HTML comeco==================================== -->
     <div class="container">
         <div class="row">
@@ -134,7 +99,7 @@
             <div class="offset-3 col-6">      
                 <h1>Contatos</h1>
                 <form action="?p=contatos" method="post">   
-                <!-- Esta guardando no name="formulario" o value="email" -->     
+                <!-- Esta aguardando no name="formulario" o value="email" -->     
                     <input type="hidden" name="formulario" value="email">   
                      <!-- erro de email nao digitado======= -->
                     <?php if(!empty($erro)) : ?>
@@ -161,6 +126,7 @@
                             <input type="submit" value="Enviar mensagem" class="btn btn-primary"> 
                             
                         </div>
+                    
             
         </form>
         <!-- //======================================================= -->
@@ -187,15 +153,13 @@
                     <div class="text-center">
                         <!-- /////////////////////// -->
                         <input type="submit" value="Receber newsletter" class="btn btn-primary" >
-                    </div>
-                    
-                    
-                </form>
+                    </div>   
+                  </form>
+               </div>
+             </div>   
             </div>
-        </div>   
+        </div>
     </div>
-    
-
 
 
 
