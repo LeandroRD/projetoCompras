@@ -51,8 +51,13 @@ if (isset($_GET['p'])){
         include('criar_usuario.php');             
          break;
 
+         case 'cadastro1':
+            echo'teste';
+            //include('criar_usuario.php');             
+             break;
 
     case 'area_reservada':
+      // ----------2a Acao-------------------- 
      //verifica se houve submissao de formulario
          $erro=false;
          if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -60,7 +65,8 @@ if (isset($_GET['p'])){
             if(verificarLogin()){
                   include('layout/user.php');
             }else{
-                  //erro, login invalido
+                  //3a acao retorna erro=verdadeiro, login invalido
+                  
                   $erro=true;
 
             }

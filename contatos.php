@@ -8,7 +8,7 @@
 ////Se houver uma submissao
     if($_SERVER['REQUEST_METHOD'] == 'POST' ){
         //=============================================================
-        //Açao se  input type 'formulario' for  value="email" 
+        //Açao se  input type 'formulario' for  value="email" (botao enviar mensagem)
         if($_POST['formulario']=="email"){
             $erro='';
 
@@ -41,7 +41,7 @@
                 }
                 
     //=============================================================
-    //Açao se  input type 'formulario' for  value="newsletter" 
+    //Açao se  input type 'formulario' for  value="newsletter" (botao receber newsletter)
     if($_POST['formulario']=='newsletter'){
             $email=$_POST['text_email'];
             
@@ -98,7 +98,8 @@
         <div class="row mt-2 mb-2">
             <div class="offset-3 col-6">      
                 <h1>Contatos</h1>
-                <form action="?p=contatos" method="post">   
+<!-- =================Inicio Form================================================ -->
+            <form action="?p=contatos" method="post">   
                 <!-- Esta aguardando no name="formulario" o value="email" -->     
                     <input type="hidden" name="formulario" value="email">   
                      <!-- erro de email nao digitado======= -->
@@ -108,9 +109,9 @@
                        
                     </div>
                     <?php endif; ?>
-                   <!-- ======================================================= -->
+                   
                     <div class="form-group">
-                        <input type="email"name="text_email"class="form-control" placeholder="Email"require>
+                        <input type="email"name="text_email"class="form-control" placeholder="Email"required>
                     </div>
                     
                     <div class="form-group">
@@ -120,24 +121,11 @@
                     <div class="form-group">
                             <textarea name="text_mensagem"  cols="60" rows="3" class="form-control" required></textarea>
                     </div>
-                    <div class="text-center">
-                            
-                             
-                            <input type="submit" value="Enviar mensagem" class="btn btn-primary"> 
-                            
-                        </div>
-                    
-            
-        </form>
-        <!-- //======================================================= -->
-        <form action="?p=contatos" method="post" >
- 
-                <div class="text-center">
-                         <!-- <input type="hidden" name="formulario" value="teste22">
-                        <input type="submit" value="agora" class="btn btn-primary" > -->
+                    <div class="text-center">     
+                            <input type="submit" value="Enviar mensagem" class="btn btn-primary">        
                     </div>  
-                </form>
-        <!-- //======================================================= -->
+            </form>
+<!-- //=======FIM Form================================================ -->
       
         <div class="row"style="margin-bottom: 150px">
             <div class="offset-0 col-12">
