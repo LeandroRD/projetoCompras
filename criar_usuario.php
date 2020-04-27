@@ -128,7 +128,7 @@ function mostrar_caixa(){
     
     <div class="container">
     
-        <div class="row mt-2 mb-2 text-center">
+        <div class="row mt-3">
             <div class="offset-4 col-4">      
                 <h2 >Cadastro de Usuário</h2>
 

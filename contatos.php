@@ -36,36 +36,36 @@
                     //envio de email
                     if(empty($erro)){                       
                         include('enviar_email.php');
-                        echo'ok';
+                        //echo'ok';
                     }     
                 }
                 
     //=============================================================
     //Açao se  input type 'formulario' for  value="newsletter" (botao receber newsletter)
-    if($_POST['formulario']=='newsletter'){
-            $email=$_POST['text_email'];
+    // if($_POST['formulario']=='newsletter'){
+    //         $email=$_POST['text_email'];
             
-            include 'gestor.php';
-            $gestor = new gestor();
-    //-----------------------------------------------------------------        
-            // instrucoes de seguranca bloquear Query mal intencionado pela input type
-            $params=array(
-                ':seguranca'=>$email
-            );
-    //-----------------------------------------------------------------
-            //verificar se ja existe e-mail na base de dados
-            $resultado = $gestor->EXE_QUERY("SELECT email FROM emails WHERE email = :seguranca",$params);
-            if(count($resultado)!=0){
-                //email ja esta registrado
-                $erro_newsletter="O e-mail ja esta registrado";
-            }
-            else{
-                //email novo
-            //inserir novo email na base de dados
-            $gestor->EXE_NON_QUERY('INSERT INTO emails(email) VALUES(:seguranca)',$params);
-            $sucesso_newsletter='Obrigado por ter registrado o seu e-mail';    
-        }
-    } 
+    //         include 'gestor.php';
+    //         $gestor = new gestor();
+    // //-----------------------------------------------------------------        
+    //         // instrucoes de seguranca bloquear Query mal intencionado pela input type
+    //         $params=array(
+    //             ':seguranca'=>$email
+    //         );
+    // //-----------------------------------------------------------------
+    //         //verificar se ja existe e-mail na base de dados
+    //         $resultado = $gestor->EXE_QUERY("SELECT email FROM emails WHERE email = :seguranca",$params);
+    //         if(count($resultado)!=0){
+    //             //email ja esta registrado
+    //             $erro_newsletter="O e-mail ja esta registrado";
+    //         }
+    //         else{
+    //             //email novo
+    //         //inserir novo email na base de dados
+    //         $gestor->EXE_NON_QUERY('INSERT INTO emails(email) VALUES(:seguranca)',$params);
+    //         $sucesso_newsletter='Obrigado por ter registrado o seu e-mail';    
+    //     }
+    // } 
     
 
     }  
@@ -97,8 +97,8 @@
     
         <div class="row mt-2 mb-2">
             <div class="offset-3 col-6">      
-                <h1>Contatos</h1>
-<!-- =================Inicio Form================================================ -->
+                <h2>Contatos</h2>
+<!-- =================Inicio Form email================================================ -->
             <form action="?p=contatos" method="post">   
                 <!-- Esta aguardando no name="formulario" o value="email" -->     
                     <input type="hidden" name="formulario" value="email">   
@@ -125,24 +125,15 @@
                             <input type="submit" value="Enviar mensagem" class="btn btn-primary">        
                     </div>  
             </form>
-<!-- //=======FIM Form================================================ -->
+<!-- //=======FIM Form email================================================ -->
       
         <div class="row"style="margin-bottom: 150px">
             <div class="offset-0 col-12">
             
-            <h2>Newsletter</h2>
-            <form action="?p=contatos" method="post" >
-                    <!-- Esta guardando no name="formulario" o value="newsletter" -->
-                    <input type="hidden" name="formulario" value="newsletter"> 
-                    
-                    <div class="form-group">
-                        <input type="email" name="text_email"class="form-control" placeholder="Email" required>
-                    </div>  
-                    <div class="text-center">
-                        <!-- /////////////////////// -->
-                        <input type="submit" value="Receber newsletter" class="btn btn-primary" >
-                    </div>   
-                  </form>
+            <!-- <h2>Newsletter</h2> -->
+            <!-- //=======Inicio Form newsletter  ================================================ -->
+           
+                  <!-- //=======Fim Form newsletter  ================================================ -->
                </div>
              </div>   
             </div>

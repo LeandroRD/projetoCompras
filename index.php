@@ -10,6 +10,7 @@ session_start();
 
  //Rotas (routes) - roteamento - caso a query string estiver fazia
  $pag='inicio';
+ $rodape=false;
 
 if (isset($_GET['p'])){
 
@@ -47,14 +48,20 @@ if (isset($_GET['p'])){
          include('contatos.php');
           break;
 
+    case 'contatos_email':
+        include('contatos_email.php');
+          break;
+
     case 'cadastro':
         include('criar_usuario.php');             
          break;
 
-         case 'cadastro1':
-            echo'teste';
-            //include('criar_usuario.php');             
-             break;
+    case 'buscar_usuarios':
+       include('buscar_usuarios.php'); 
+       $rodape=true;            
+        break;
+
+         
 
     case 'area_reservada':
       // ----------2a Acao-------------------- 
@@ -81,8 +88,13 @@ if (isset($_GET['p'])){
 
 
 
+ if ($rodape ==false){
+
+      include('layout/footer.php');
+ }
  
- include('layout/footer.php');
+ 
+ 
  include('layout/html_footer.php');
 
 function verificarLogin(){
@@ -132,4 +144,3 @@ if(count($resultado)==0){
            
       }     
 }
-

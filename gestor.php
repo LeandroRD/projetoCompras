@@ -1,11 +1,12 @@
+
 <?php 
 class Gestor
 {    
     private $db_server = 'localhost';
     private $db_name = 'newsletter';
     private $db_charset = 'utf8';
-    private $db_username = 'root';
-    PRIVATE $db_password = '';
+    private $db_username = 'usuarios_user';
+    PRIVATE $db_password = 'abc123';
     
     //==================================================================
     public function EXE_QUERY($query, $parameters = null, $debug = true, $close_connection = true){

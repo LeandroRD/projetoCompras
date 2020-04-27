@@ -27,7 +27,7 @@
     <!-- servicos -->
     <li><a href="#">Contatos</a>
         <ul>
-            <li><a href="#">xxxxxxxx</a>
+            <li><a href="?p=contatos_email">Registrar e-mail</a>
             </li>
             <li><a href="?p=contatos">Enviar e-mail</a></li>
         </ul>
@@ -47,28 +47,16 @@
         <ul>
             <li><a href="#"><a href="?p=cadastro">Cadastrar</a></a>
             </li>
-            <li><a href="#">Buscar</a></li>
+            <li><a href="#"><a href="?p=buscar_usuarios">Buscar</a></a>
+            
+            
+            </li>
         </ul>
     
     </li>
   </ul>
 
 </nav> 
-</div>
-
-
-        <!-- <div class="col-7 text-right p-3 topo-nav"> 
-            
-          <a href="?p=inicio">Início</a>
-          <a href="?p=empresa">Empresa</a>
-          <a href="?p=servicos">Serviços</a>
-          <a href="?p=contatos">Contatos</a>
-          <a href="?p=cadastro">Cadastro</a>
-          <a href="?p=area_reservada">Área Reservada</a>
-
-        </div> -->
-        
+</div>     
     </div>
-
-
 </div>

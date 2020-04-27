@@ -34,21 +34,19 @@ try {
    
 
     $mail->send();
-   
-    echo 'E-mail enviado com sucesso!!!!';
-    
-    // session_destroy();
-    
 
-    // die();
-    // exit;
-    
-    
-    
-    
-    
-    
-    
+   echo'<div class="container">
+             <div class="row">
+               <div class="offset-3 col-6 text-center">
+                 <div class="alert alert-danger"id="frase_success">E-mail enviado com sucesso </div>
+                </div>
+             </div>
+        </div>';
+        echo "<script> $('#frase_success').delay(2000).fadeOut('slow');
+        
+        </script>";
+         
+       
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }

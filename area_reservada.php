@@ -1,19 +1,13 @@
 <!-- =========INICIO AREA_RESERVADA.PHP============================================ -->
 <!-- Se existe uma session com o User-->
  
-  
-    <h1>Área Reservada</h1>
-
-   
-
-
-
 <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="offset-4 col-4">
+              <h2>Área Reservada</h2>
             <!--------Inicio do Form  a 1a Acao é mandar para o index -> p= area_reservada---------------------------->
-        <form action="?p=area_reservada" method="post">
-            <div class="form-group">
+                <form action="?p=area_reservada" method="post">
+                  <div class="form-group">
                 <!-- Ira Enviar dados da text_usuario -->
                 <input type="text" name="text_usuario" placeholder="Usuario" class="form-control" autofocus>
             </div>    
