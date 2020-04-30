@@ -7,7 +7,6 @@ session_start();
  include('layout/nav.php');
  include('layout/user.php');
 
-
  //Rotas (routes) - roteamento - caso a query string estiver fazia
  $pag='inicio';
  $rodape=false;
@@ -18,72 +17,76 @@ if (isset($_GET['p'])){
       $pag = $_GET['p'];    
 }
 
-
  switch ($pag) {
 
-
       //logout
-      case 'logout':
+     case 'logout':
             session_destroy();
 
             //instrucao para a barra de login desapareca
             Header('Location: '.$_SERVER['PHP_SELF']);
            
-            return;
-            break;
+      return;
+      break;
 
-    case 'inicio':
+      case 'inicio':
       include('inicio.php');
-       break;
+      break;
 
-    case 'empresa':
+      case 'empresa':
       include('empresa.php');
-       break;
+      break;
 
-    case 'servicos':
+      case 'servicos':
          include('servicos.php');
-          break;
+      break;
 
-    case 'contatos':
+      case 'contatos':
          include('contatos.php');
-          break;
+      break;
 
-    case 'contatos_email':
+      case 'contatos_email':
         include('contatos_email.php');
-          break;
+      break;
 
-    case 'cadastro':
+      case 'cadastro':
         include('criar_usuario.php');             
-         break;
+      break;
 
-    case 'buscar_usuarios':
-       include('buscar_usuarios.php'); 
-       $rodape=true;            
-        break;
+      case 'editar_usuario':
+        include('editar_usuario.php');            
+      break;       
+         
+      case 'buscar_usuarios':
+        include('buscar_usuarios.php'); 
+        $rodape=true;            
+      break;
 
+      case 'deletar_usuario':
+            include('deletar_usuario.php'); 
+            $rodape=true;            
+      break;
          
 
-    case 'area_reservada':
-      // ----------2a Acao-------------------- 
-     //verifica se houve submissao de formulario
+      case 'area_reservada':
+         // ----------2a Acao-------------------- 
+         //verifica se houve submissao de formulario
          $erro=false;
          if($_SERVER['REQUEST_METHOD']=='POST'){
             //Ira retornar a barra layout
             if(verificarLogin()){
                   include('layout/user.php');
             }else{
-                  //3a acao retorna erro=verdadeiro, login invalido
-                  
+                  //3a acao retorna erro=verdadeiro, login invalido                 
                   $erro=true;
-
             }
          }
          include('area_reservada.php');
-         break;
+      break;
 
-    default:
+      default:
         include('inicio.php');
-       break;
+      break;
  }
 
 
@@ -97,50 +100,98 @@ if (isset($_GET['p'])){
  
  include('layout/html_footer.php');
 
-function verificarLogin(){
-      
-   /*
-buscar os dados do user a base de dados
-      -se user nao existe = login invalido
-      -se user existe
-            -verificar se a senha é valida
-                  -sim = criar sessao
-                  -nao = login invalido
-   */
-$usuario = trim($_POST['text_usuario']);
-$senha = trim($_POST['text_senha']);
 
-include 'gestor.php';
-$gestor= new Gestor();
-$params = array(
-      ':usuario'=>$usuario
-);
-$resultado = $gestor->EXE_QUERY("
-      SELECT * FROM users 
-      WHERE usuario =:usuario
-",$params);
-
-
-if(count($resultado)==0){
-      // login invalido - usuario nao existe no BD
-      return false;
-}else{
-      //usuario existe
-      
-      $senha_bd = $resultado[0]['senha'];
-      
-      //verificar password
-      if(password_verify($senha, $senha_bd)){
-            //senha valida
-            $_SESSION['user']=$resultado[0]['usuario'];
+ 
+ function verificarLogin(){
+     //criar 2 variaveis (usuario e senha) recebendo os valores submetidos
+    $usuario = trim($_POST['text_usuario']);
+    $senha = trim($_POST['text_senha']);
+    
+    //ligar a gestor
+    include 'gestor.php';
+    $gestor= new Gestor();
+ 
+    //criar array $params de seguranca ligado a variavel usuario que recebeu a submissao
+    $params = array(
+          ':usuario'=>$usuario
+    );
+    //criar variavel  $resultado ligado ao GESTOR, usando a array $usuario
+    $resultado = $gestor->EXE_QUERY("
+          SELECT * FROM users 
+          WHERE usuario =:usuario
+    ",$params);
+    //se variavel resultado nao achar 
+    if(count($resultado)==0){
+          // login invalido - usuario nao existe no BD
+          return false;
+     
+    //se variavel resultado achar
+    }else{
           
-            return true;
+          //criar variavel senha_bd ligado a variavel resultado pegando o campo 'senha'
+          $senha_bd = $resultado[0]['senha'];
+          
+          //verificar password comparando a criptografada com a que foi inserida area_reservada.php
+          if(password_verify($senha, $senha_bd)){
+                //senha valida
+                $_SESSION['user']=$resultado[0]['usuario'];
+              
+                return true;
+                
+          }else{
+                //senha invalida
+                
+                return false;
+          }
+               
+          }     
+    }
+
+
+// function verificarLogin(){
+      
+//    /*
+// buscar os dados do user a base de dados
+//       -se user nao existe = login invalido
+//       -se user existe
+//             -verificar se a senha é valida
+//                   -sim = criar sessao
+//                   -nao = login invalido
+//    */
+// $usuario = trim($_POST['text_usuario']);
+// $senha = trim($_POST['text_senha']);
+
+// include 'gestor.php';
+// $gestor= new Gestor();
+// $params = array(
+//       ':usuario'=>$usuario
+// );
+// $resultado = $gestor->EXE_QUERY("
+//       SELECT * FROM users 
+//       WHERE usuario =:usuario
+// ",$params);
+
+
+// if(count($resultado)==0){
+//       // login invalido - usuario nao existe no BD
+//       return false;
+// }else{
+//       //usuario existe
+      
+//       $senha_bd = $resultado[0]['senha'];
+      
+//       //verificar password
+//       if(password_verify($senha, $senha_bd)){
+//             //senha valida
+//             $_SESSION['user']=$resultado[0]['usuario'];
+          
+//             return true;
             
-      }else{
-            //senha invalida
+//       }else{
+//             //senha invalida
             
-            return false;
-      }
+//             return false;
+//       }
            
-      }     
-}
+//       }     
+// }

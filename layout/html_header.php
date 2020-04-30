@@ -17,7 +17,7 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
      <!-- link para datatable -->
-    <link rel="stylesheet" type="text/css" href="inc/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/inc/datatables.min.css"/>
     </head>
 <body>
 

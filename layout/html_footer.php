@@ -1,6 +1,6 @@
 
 
-<!-- DataTable -->
+
 
 
         
@@ -15,12 +15,12 @@
 
 
 
-
+<!-- link DataTable -->
 <script
-            type="text/javascript" src="inc/datatables.min.js">
+            type="text/javascript" src="assets/inc/datatables.min.js">
         </script>
         
-
+<!-- Variavel tabela vale como datatable -->
         <script>  
             $(document).ready( function () {
                 // Campo para inserir o nome da datatable

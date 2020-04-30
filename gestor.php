@@ -89,7 +89,6 @@ class Gestor
         if ($close_connection) {
             $connection = null;
         }
-        
         return true;
     }
 }

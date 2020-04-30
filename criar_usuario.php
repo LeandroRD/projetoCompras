@@ -22,11 +22,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
         //Recebe o usuario e a senha
         $usuario = $_POST['text_usuario'];
         $senha = $_POST['text_senha'];
-        //faz um array de seguranca para selecionar
-        
-        
-        
-        
+       
+       
+        //faz um array de seguranca para selecionar 
         $params=array(
             ':seguranca'=>$usuario
         );
@@ -35,8 +33,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
 
   //verificar se ja existe e-mail na base de dados criando a variavel resultado
   $resultado = $gestor->EXE_QUERY("SELECT usuario FROM users WHERE usuario = :seguranca",$params);
+  
   //se resultado por diferente de 0
   if(count($resultado)!=0){
+    
     //email ja esta registrado
     $erro_newsletter="O usuario ja esta registrado";
 }
@@ -53,11 +53,14 @@ else{
  
  
   $gestor->EXE_NON_QUERY("
-      INSERT INTO users(usuario, senha)
-      VALUES(:usuario_gravar, :passwrd_gravar)
+      INSERT INTO users(usuario, senha, created_at)
+      VALUES(:usuario_gravar, :passwrd_gravar, NOW())
   ",$params);
+
   $sucesso_newsletter='Cadastro Confirmardo';
 
+
+  
 
 
     }

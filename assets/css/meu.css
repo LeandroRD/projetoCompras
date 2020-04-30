@@ -68,8 +68,13 @@ color: rgb(218, 162, 8);
         padding: 50px;
         font-size: 2em;
         background-color:rgb(95, 145, 95);
-        color: rgb(0, 0, 0)}
+        }
         
     .separador{
         margin-top: 50px;
+    }
+
+    .color-red{
+        color:red;
+       
     }
