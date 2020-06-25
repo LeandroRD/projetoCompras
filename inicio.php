@@ -1,5 +1,5 @@
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide teste-menu1" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active slide-1">
      <h1>Slide1</h1>

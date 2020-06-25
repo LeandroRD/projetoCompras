@@ -72,9 +72,9 @@
     // ==========================PHP FIM==================================== 
     ?>
     <!--o ====================== HTML comeco==================================== -->
-    <div class="container">
+    <div class="container ">
         <div class="row">
-            <div class="offset-3 col-6 text-center">
+            <div class="offset-3 col-6 text-center ">
 
            
 
@@ -93,7 +93,7 @@
         </div>
     </div>
     
-    <div class="container">
+    <div class="container teste-menu1">
     
         <div class="row mt-2 mb-2">
             <div class="offset-3 col-6">      

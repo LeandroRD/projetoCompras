@@ -17,10 +17,10 @@ SELECT * FROM users
 
 
 <!-- <table  class="table" > -->
-<div class="container-fluid mt-1" >
+<div class="container-fluid mt-1 teste-menu1 " >
 
 
-    <table  id="tabela" class="table " >
+    <table  id="tabela" class="table tabela-resp1" >
     
     <!-- cabecalho------------>
     <thead class=" thead-dark" > 

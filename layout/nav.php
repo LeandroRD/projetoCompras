@@ -1,4 +1,5 @@
-<div class="container-fluid">
+<div class="container-fluid ">
+    
      <div class="row fundo-topo  ">
         <div class="col-5 p-5  "  >
              <a href="?p=inicio">
@@ -7,7 +8,7 @@
           </div>
         
 <!-- ============================================ -->
-<div class="col-7 text-right p-1 "> 
+<div class="col-7 text-right p-1  "> 
 
 <input type="checkbox" id="bt_menu">
 <label for="bt_menu">&#9776;</label>
@@ -59,4 +60,5 @@
 </nav> 
 </div>     
     </div>
+   
 </div>
