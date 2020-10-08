@@ -1,3 +1,7 @@
+
+
+
+
 <?php 
    
     $erro_newsletter='';
@@ -34,46 +38,47 @@
     
 
     }?>
-<div class="container">
+<div class="container " style="margin-top: 150px;">
         <div class="row">
             <div class="offset-3 col-6 text-center">
                 <?php if(!empty($erro_newsletter)) : ?>
-                    <div class="alert alert-danger "id="frase_erro">
+                    <div class="alert alert-danger  objeto-apagado " >
                         <?php echo $erro_newsletter?>
+
                     </div>
                 <?php endif;?>
 
                 <?php if(!empty($sucesso_newsletter)): ?>
-                <div class="alert alert-success"id="frase_success">
+                <div class="alert alert-success objeto-apagado">
                 <?php echo $sucesso_newsletter?>
                  </div>
                 <?php endif;?>
             </div>
         </div>
-        <script>
-                $('#frase_erro').delay(2000).fadeOut('slow');
-        </script>
-        <script>
-                $('#frase_success').delay(2000).fadeOut('slow');
-        </script>
+      
+
+        
     </div>
 
 
 
-<div class="container teste-menu1 ">
+<div class="container teste-menu1 tamanho ">
     <div class="row mt-3">
-        <div class="offset-4 col-4"> 
-             <div class="row"style="margin-bottom: 150px">
+        <div class=" col-12"> 
+             <div class="row"style="margin-bottom: 70px">
             <div class="offset-0 col-12">    
-            <h2>Newsletter</h2>
+            <h3>Cadastro de e-mail.</h3>
                     <form action="?p=contatos_email" method="post" >
                     <!-- Esta guardando no name="formulario" o value="newsletter" -->
                     <input type="hidden" name="formulario" value="newsletter"> 
                         <div class="form-group">
-                            <input type="email" name="text_email"class="form-control" placeholder="Email" required>
+                            <input size="10" type="email" name="text_email"class="form-control" placeholder="Email" required>
                         </div>  
-                         <div class="text-center">
-                        <input type="submit" value="Receber newsletter" class="btn btn-primary" >
+                         <!-- <div class="text-center"> -->
+                        <input  type="submit" value="Confirmar Cadastro" class="btn btn-primary margin-left: 0px" >
+                    <!-- </div> -->
+                    <div class="topo-nav">
+                        <a href="?p=contatos" style="position: absolute; margin-top: 50px;margin-left:0px"  >Enviar e-mail</a>
                     </div>   
                   </form>
                </div>

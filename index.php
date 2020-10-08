@@ -5,7 +5,9 @@ session_start();
 //incluindo teste 11:08
  include('layout/html_header.php');
  include('layout/nav.php');
+//  include('layout/nav.php');
  include('layout/user.php');
+//  include('layout/aviso-delete.php');
 
  //Rotas (routes) - roteamento - caso a query string estiver fazia
  $pag='inicio';
@@ -22,44 +24,39 @@ if (isset($_GET['p'])){
       //logout
      case 'logout':
             session_destroy();
-
             //instrucao para a barra de login desapareca
-            Header('Location: '.$_SERVER['PHP_SELF']);
-           
-      return;
+            echo'
+            <script>
+              window.location.replace("index.php?");
+            </script>';
+            return;
       break;
 
       case 'inicio':
-      include('inicio.php');
+            include('inicio.php');
       break;
 
-      case 'empresa':
-      include('empresa.php');
-      break;
-
-      case 'servicos':
-         include('servicos.php');
-      break;
+      
 
       case 'contatos':
-         include('contatos.php');
+            include('contatos.php');
       break;
 
       case 'contatos_email':
-        include('contatos_email.php');
+            include('contatos_email.php');
       break;
 
       case 'cadastro':
-        include('criar_usuario.php');             
+            include('criar_usuario.php');             
       break;
 
       case 'editar_usuario':
-        include('editar_usuario.php');            
+            include('editar_usuario.php');            
       break;       
          
       case 'buscar_usuarios':
-        include('buscar_usuarios.php'); 
-        $rodape=true;            
+            include('buscar_usuarios.php'); 
+            $rbhodape=true;            
       break;
 
       case 'deletar_usuario':
@@ -67,6 +64,22 @@ if (isset($_GET['p'])){
             $rodape=true;            
       break;
          
+      case 'editar_final':
+            include('editar_final.php'); 
+            $rodape=true;            
+      break;
+
+      case 'editar_final2':
+            include('editar_final2.php'); 
+            $rodape=true;            
+      break;
+
+      case 'deletar_final':
+            include('deletar_final.php'); 
+            $rodape=true;            
+      break;
+
+      
 
       case 'area_reservada':
          // ----------2a Acao-------------------- 
@@ -92,16 +105,12 @@ if (isset($_GET['p'])){
 
 
  if ($rodape ==false){
-
       include('layout/footer.php');
  }
  
  
- 
  include('layout/html_footer.php');
 
-
- 
  function verificarLogin(){
      //criar 2 variaveis (usuario e senha) recebendo os valores submetidos
     $usuario = trim($_POST['text_usuario']);
@@ -115,11 +124,13 @@ if (isset($_GET['p'])){
     $params = array(
           ':usuario'=>$usuario
     );
+    
     //criar variavel  $resultado ligado ao GESTOR, usando a array $usuario
     $resultado = $gestor->EXE_QUERY("
           SELECT * FROM users 
           WHERE usuario =:usuario
     ",$params);
+    
     //se variavel resultado nao achar 
     if(count($resultado)==0){
           // login invalido - usuario nao existe no BD
@@ -147,51 +158,8 @@ if (isset($_GET['p'])){
           }     
     }
 
+    
 
-// function verificarLogin(){
-      
-//    /*
-// buscar os dados do user a base de dados
-//       -se user nao existe = login invalido
-//       -se user existe
-//             -verificar se a senha é valida
-//                   -sim = criar sessao
-//                   -nao = login invalido
-//    */
-// $usuario = trim($_POST['text_usuario']);
-// $senha = trim($_POST['text_senha']);
-
-// include 'gestor.php';
-// $gestor= new Gestor();
-// $params = array(
-//       ':usuario'=>$usuario
-// );
-// $resultado = $gestor->EXE_QUERY("
-//       SELECT * FROM users 
-//       WHERE usuario =:usuario
-// ",$params);
+   
 
 
-// if(count($resultado)==0){
-//       // login invalido - usuario nao existe no BD
-//       return false;
-// }else{
-//       //usuario existe
-      
-//       $senha_bd = $resultado[0]['senha'];
-      
-//       //verificar password
-//       if(password_verify($senha, $senha_bd)){
-//             //senha valida
-//             $_SESSION['user']=$resultado[0]['usuario'];
-          
-//             return true;
-            
-//       }else{
-//             //senha invalida
-            
-//             return false;
-//       }
-           
-//       }     
-// }

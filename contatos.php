@@ -25,7 +25,7 @@
                         $email = $_POST['text_email'];
                         $assunto = $_POST['text_assunto'];
                         $mensagem = $_POST['text_mensagem'];
-            //-----------------------------------------------------------------
+    //-----------------------------------------------------------------
                         //Mensagem se  InputType do e-mail estiver nulo
                         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                             $erro='Endereco de email invalido';
@@ -39,45 +39,13 @@
                         //echo'ok';
                     }     
                 }
-                
-    //=============================================================
-    //Açao se  input type 'formulario' for  value="newsletter" (botao receber newsletter)
-    // if($_POST['formulario']=='newsletter'){
-    //         $email=$_POST['text_email'];
-            
-    //         include 'gestor.php';
-    //         $gestor = new gestor();
-    // //-----------------------------------------------------------------        
-    //         // instrucoes de seguranca bloquear Query mal intencionado pela input type
-    //         $params=array(
-    //             ':seguranca'=>$email
-    //         );
-    // //-----------------------------------------------------------------
-    //         //verificar se ja existe e-mail na base de dados
-    //         $resultado = $gestor->EXE_QUERY("SELECT email FROM emails WHERE email = :seguranca",$params);
-    //         if(count($resultado)!=0){
-    //             //email ja esta registrado
-    //             $erro_newsletter="O e-mail ja esta registrado";
-    //         }
-    //         else{
-    //             //email novo
-    //         //inserir novo email na base de dados
-    //         $gestor->EXE_NON_QUERY('INSERT INTO emails(email) VALUES(:seguranca)',$params);
-    //         $sucesso_newsletter='Obrigado por ter registrado o seu e-mail';    
-    //     }
-    // } 
-    
-
     }  
     // ==========================PHP FIM==================================== 
     ?>
     <!--o ====================== HTML comeco==================================== -->
-    <div class="container ">
+    <div class="container " style="margin-top: 150px;position: relative;" >
         <div class="row">
             <div class="offset-3 col-6 text-center ">
-
-           
-
                 <?php if(!empty($erro_newsletter)) : ?>
                     <div class="alert alert-danger">
                         <?php echo $erro_newsletter?>
@@ -93,13 +61,13 @@
         </div>
     </div>
     
-    <div class="container teste-menu1">
-    
-        <div class="row mt-2 mb-2">
-            <div class="offset-3 col-6">      
-                <h2>Contatos</h2>
+    <div class="container teste-menu1 " >   
+        <div class="row mt-5 mb-2 margem_grande " >
 <!-- =================Inicio Form email================================================ -->
-            <form action="?p=contatos" method="post">   
+                <form action="?p=contatos"   method="post" class="minimo_input " >
+                    <h3 style="width: 170px;margin-left: auto;margin-right: auto;" >
+                        Enviar e-mail
+                    </h3>   
                 <!-- Esta aguardando no name="formulario" o value="email" -->     
                     <input type="hidden" name="formulario" value="email">   
                      <!-- erro de email nao digitado======= -->
@@ -115,28 +83,19 @@
                     </div>
                     
                     <div class="form-group">
-                            <input type="text"name="text_assunto"class="form-control" placeholder="Assunto"required>
+                        <input type="text"name="text_assunto"class="form-control" placeholder="Assunto"required>
                     </div>
 
                     <div class="form-group">
-                            <textarea name="text_mensagem"  cols="60" rows="3" class="form-control" required></textarea>
+                        <textarea name="text_mensagem"  cols="60" rows="3" class="form-control" required></textarea>
                     </div>
+                
                     <div class="text-center">     
-                            <input type="submit" value="Enviar mensagem" class="btn btn-primary">        
+                        <input type="submit" value="Enviar mensagem" class="btn btn-primary">        
                     </div>  
-            </form>
-<!-- //=======FIM Form email================================================ -->
-      
-        <div class="row"style="margin-bottom: 150px">
-            <div class="offset-0 col-12">
+                </form>
+
             
-            <!-- <h2>Newsletter</h2> -->
-            <!-- //=======Inicio Form newsletter  ================================================ -->
-           
-                  <!-- //=======Fim Form newsletter  ================================================ -->
-               </div>
-             </div>   
-            </div>
         </div>
     </div>
 

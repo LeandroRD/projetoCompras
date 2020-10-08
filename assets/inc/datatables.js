@@ -25936,7 +25936,7 @@ return jQuery;
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
-			 *          "lengthMenu": "Display _MENU_ records"
+			 *          "isplay _MENU_ records"
 			 *        }
 			 *      } );
 			 *    } );

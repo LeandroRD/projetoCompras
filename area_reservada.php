@@ -1,7 +1,9 @@
 <!-- =========INICIO AREA_RESERVADA.PHP============================================ -->
 <!-- Se existe uma session com o User-->
  
-<div class="container">
+
+
+<div class="container teste-menu1 pos_absol ">
     <div class="row mt-3">
         <div class="offset-4 col-4">
               <h2>Área Reservada</h2>

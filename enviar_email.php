@@ -35,18 +35,16 @@
 
           $mail->send();
 
-          echo'<div class="container">
+          echo'<div class="container" style="margin-top: 2px;position: absolute;margin-left: 70px;">
                     <div class="row">
                       <div class="offset-3 col-6 text-center">
-                        <div class="alert alert-danger"id="frase_success">E-mail enviado com sucesso </div>
+                        <div class="alert alert-danger objeto-apagado">E-mail enviado com sucesso </div>
                         </div>
                     </div>
                 </div>';
-          echo "<script>
-                  $('#frase_success').delay(2000).fadeOut('slow');
-                </script>";
+          
                       
       } catch (Exception $e) {
-          echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+          echo "<div style='margin-top: 2px;position: absolute;'>Não foi possivel enviar o e-mail </div>";
       }
 
