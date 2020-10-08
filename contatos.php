@@ -64,7 +64,7 @@
     <div class="container teste-menu1 " >   
         <div class="row mt-5 mb-2 margem_grande " >
 <!-- =================Inicio Form email================================================ -->
-                <form action="?p=contatos"   method="post" class="minimo_input " >
+                <form action="?p=contatos"   method="post" class="minimo_input "style="padding-bottom: 80px;" >
                     <h3 style="width: 170px;margin-left: auto;margin-right: auto;" >
                         Enviar e-mail
                     </h3>   
@@ -86,7 +86,7 @@
                         <input type="text"name="text_assunto"class="form-control" placeholder="Assunto"required>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" >
                         <textarea name="text_mensagem"  cols="60" rows="3" class="form-control" required></textarea>
                     </div>
                 

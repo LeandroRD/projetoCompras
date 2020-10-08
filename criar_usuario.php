@@ -116,7 +116,7 @@ function mostrar_caixa(){
     <!-- //================Fim do Container 1  Alert Danger-->
     <!-- //================Inicio do Container  2 Botao Confirmar Cadastro e texto Usuario Texto-->
     
-    <div class="container teste-menu1">
+    <div class="container teste-menu1 pb-5 " >
     
         <div class="row mt-3">
             <div  style="margin-left:auto;margin-right: auto;">      
@@ -141,11 +141,11 @@ function mostrar_caixa(){
                             <input type="text"name="text_senha"class="form-control" placeholder="Senha" required>
                     </div>
 
-        <div class="text-center">
+        <div class="text-center" >
             <input type="hidden" name="formulario" value="botao_entrar">
             <input type="submit" onclick="mostrar_caixa()" value="Confirmar Cadastro" class="btn btn-primary" >
         </div>
-        <div class="topo-nav">
+        <div class="topo-nav" style="margin-top: 80px;padding-bottom: 50px;">
                 
             <a href="?p=buscar_usuarios" >Busca de Lista de Usuários</a>
         </div>  

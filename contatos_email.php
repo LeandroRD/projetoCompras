@@ -58,12 +58,12 @@
       
 
         
-    </div>
+    </div >
 
 
 
 <div class="container teste-menu1 tamanho ">
-    <div class="row mt-3">
+    <div class="row mt-3"  >
         <div class=" col-12"> 
              <div class="row"style="margin-bottom: 70px">
             <div class="offset-0 col-12">    
@@ -76,8 +76,9 @@
                         </div>  
                          <!-- <div class="text-center"> -->
                         <input  type="submit" value="Confirmar Cadastro" class="btn btn-primary margin-left: 0px" >
-                    <!-- </div> -->
-                    <div class="topo-nav">
+                
+                        <!-- </div> -->
+                    <div class="topo-nav" style="padding-bottom: 80px;">
                         <a href="?p=contatos" style="position: absolute; margin-top: 50px;margin-left:0px"  >Enviar e-mail</a>
                     </div>   
                   </form>

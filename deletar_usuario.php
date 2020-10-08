@@ -39,7 +39,7 @@ function mostrar_caixa(){
     </script>
 
 <div class="container minimo_input2 tamanho2 "style="margin-top: 160px;">
-        <div class="row   ">
+        <div class="row   " style="text-align: center;">
                     <div class="col-sm-12  " >
                         <h4 >  Deletar Usuário   :  </h4>
                     
