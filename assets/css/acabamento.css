@@ -1,0 +1,91 @@
+
+.bord1
+{
+    border-top: 5px rgb(220, 220, 220)   outset;
+    border-left: 5px rgb(220, 220, 220)   outset;
+    border-right: 5px rgb(220, 220, 220)   outset;
+    width: 300px;
+    height: 90px;
+    background-color: rgb(200, 200, 200);
+    text-align: center;
+}
+
+.bord1_h6
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 80px;
+    margin-right: auto;   
+}
+
+
+.bord1_2
+{    
+    border-top: 4px rgb(220, 220, 220)   outset;
+    border-bottom: 4px rgb(220, 220, 220)   outset;
+    border-left: 4px rgb(220, 220, 220)   outset;
+    border-right: 4px rgb(220, 220, 220)   outset;
+    text-align: center; 
+    margin-left: 40px;  
+    width: 210px;
+    height: 30px;
+    background-color: rgb(144,238,144);
+}
+
+.bord2_2
+{   
+    border-top: 4px rgb(220, 220, 220)   outset;
+    border-bottom: 4px rgb(220, 220, 220)   outset;
+    border-left: 4px rgb(220, 220, 220)   outset;
+    border-right: 4px rgb(220, 220, 220)   outset;
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 210px;
+    height: 30px;
+    background-color: rgb(255,0,0);
+    /* position: absolute; */
+    margin-top: -10px;
+    
+    
+    
+}
+
+.bord2
+{
+    border-bottom: 5px rgb(220, 220, 220)   outset;
+    border-left: 5px rgb(220, 220, 220)   outset;
+    border-right: 5px rgb(220, 220, 220)   outset;
+    width: 300px;
+    height: 90px;
+    background-color: rgb(200, 200, 200);
+    /* margin-top: 20px; */
+}
+
+.margem_botao
+{ 
+    /* width: 300px; */
+    margin: -250px auto 0px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.margem_botao2
+{
+    /* width: 300px; */
+    /* margin: 0px auto 0px auto; */
+    position: relative;
+}
+
+.margem_center
+{
+    margin: 0px auto 0px auto;
+    width: 100px;
+    position: relative;
+}
+
+.ip_cad
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

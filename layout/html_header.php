@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/meu.css"> 
     <link rel="stylesheet" href="assets/css/teste-menu.css"> 
-
+    <link rel="stylesheet" href="assets/css/acabamento.css">
+    <script src="assets/JS/confirma.js"></script>
     <!-- link para datatable -->
     <link rel="stylesheet" type="text/css" href="assets/inc/dataTables/datatables.min.css"/>
     

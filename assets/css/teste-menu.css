@@ -52,6 +52,11 @@
         
     }
 
+    .minimo_confirma
+    {
+        width: 300PX;
+    }
+
 
 
 }
@@ -101,6 +106,23 @@
     height: 170px;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+@keyframes vai-apagar{
+    50%{
+    opacity:1 ;
+    }
+    100%{
+    opacity:0 ;
+    }
+    }
+
+.objeto-apagado
+{
+    animation: vai-apagar 4s;
+    opacity: 0;
+   
 }
 
     
