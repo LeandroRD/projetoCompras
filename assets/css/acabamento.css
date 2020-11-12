@@ -65,7 +65,7 @@
 .margem_botao
 { 
     /* width: 300px; */
-    margin: -250px auto 0px auto;
+    margin: -320px auto 0px auto;
     position: relative;
     z-index: 1;
 }
@@ -76,6 +76,49 @@
     /* margin: 0px auto 0px auto; */
     position: relative;
 }
+
+.margem_botao3
+{ 
+    /* width: 300px; */
+    margin: -320px auto 0px auto;
+    position: relative;
+    z-index: 1;
+    /* background-color: yellow; */
+    width: 300px;
+}
+
+.margem_botao4
+/* { background-color: yellow; */
+    {
+    width: 300px;
+    margin: 0px auto 0px auto;
+    /* margin: -320px auto 0px auto; */
+    position: relative;
+    /* z-index: 1; */
+}
+
+
+.margem_botao5
+{ 
+    /* width: 300px; */
+    margin: -320px auto 0px auto;
+    position: relative;
+    z-index: 1;
+    /* background-color: yellow; */
+    width: 300px;
+}
+
+.margem_botao5_1
+/* { background-color: yellow; */
+    {
+    width: 300px;
+    margin: 0px auto 0px auto;
+    /* margin: -320px auto 0px auto; */
+    position: relative;
+    /* z-index: 1; */
+}
+
+
 
 .margem_center
 {
@@ -89,3 +132,47 @@
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+
+.bord1_s
+{
+    border-top: 5px rgb(220, 220, 220)   outset;
+    border-left: 5px rgb(220, 220, 220)   outset;
+    border-right: 5px rgb(220, 220, 220)   outset;
+    border-bottom: 5px rgb(220, 220, 220)   outset;;
+    width: 300px;
+    height: 110px;
+    background-color: rgb(200, 200, 200);
+    text-align: center;
+}
+
+
+.ip_cad_s
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.bord1_h6_s
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 80px;
+    margin-right: auto;   
+}
+
+.bord1_2_s
+{    
+    border-top: 4px rgb(220, 220, 220)   outset;
+    border-bottom: 4px rgb(220, 220, 220)   outset;
+    border-left: 4px rgb(220, 220, 220)   outset;
+    border-right: 4px rgb(220, 220, 220)   outset;
+    text-align: center; 
+    margin-left: 40px;  
+    width: 210px;
+    height: 30px;
+    background-color: rgb(144,238,144);
+}
+
+
+

@@ -12,10 +12,10 @@ SELECT * FROM users
 ?>
 
 <!-- <table  class="table" > -->
-  
-<div class="container-fluid teste-menu1   pos_absol_margtopo minimo-buscar_tabela" style="margin-top: 130px;padding-bottom: 40px;" >
-<div class="minimo_tabela">   
-<table  id="tabela" class="table " style="position: relative; "
+  <br><br><br><br><br>
+<div class="container-fluid mintabelaagora  "  >
+<div >   
+<table  id="tabela" class="table " 
       >
        <!-- cabecalho------------>
         <thead class=" thead-dark" > 

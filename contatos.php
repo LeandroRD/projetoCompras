@@ -43,29 +43,13 @@
     // ==========================PHP FIM==================================== 
     ?>
     <!--o ====================== HTML comeco==================================== -->
-    <div class="container " style="margin-top: 150px;position: relative;" >
-        <div class="row">
-            <div class="offset-3 col-6 text-center ">
-                <?php if(!empty($erro_newsletter)) : ?>
-                    <div class="alert alert-danger">
-                        <?php echo $erro_newsletter?>
-                    </div>
-                <?php endif;?>
-
-                <?php if(!empty($sucesso_newsletter)): ?>
-                <div class="alert alert-success">
-                <?php echo $sucesso_newsletter?>
-                 </div>
-                <?php endif;?>
-            </div>
-        </div>
-    </div>
+   
     
-    <div class="container teste-menu1 " >   
-        <div class="row mt-3 mb-2 margem_grande " >
+    <div class="container  marg-index1 margem_notopo  "   >   
+        <div class="row mt-5 mb-2 margem_grande " >
 <!-- =================Inicio Form email================================================ -->
-                <form action="?p=contatos"   method="post" class="minimo_input "style="padding-bottom: 80px;" >
-                    <h3 style="width: 170px;margin-left: auto;margin-right: auto;" >
+                <form action="?p=contatos"   method="post" class="minimo_input " >
+                    <h3 style="width: 170px;margin-left: auto;margin-right: auto; " >
                         Enviar e-mail
                     </h3>   
                 <!-- Esta aguardando no name="formulario" o value="email" -->     
@@ -98,6 +82,9 @@
             
         </div>
     </div>
+
+    
+   
 
 
 

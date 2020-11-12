@@ -26,60 +26,15 @@
         header("Location: index.php"); 
     }   
  ?> 
-<!-- __________________INICIO HTML_____________________________________________  -->
 
-<script>
-    function verSenha(){
-        let elemento = document.getElementById("id_text_confirmarsenha");
-        let elemento2 = document.getElementById("id_text_senha");
-        
-        if (elemento.type == "text"){
-            ver_senha.innerText = "Ver Senha";
-            elemento.type ="password";
-        }else{
-            ver_senha.innerText = "Esconder Senha";
-            elemento.type = "text";
-        }
-        
-        if (elemento2.type == "text"){
-            ver_senha.innerText = "Ver Senha";
-            elemento2.type ="password";
-        }else{
-            ver_senha.innerText = "Esconder Senha";
-            elemento2.type = "text";
-        }
-        }       
-</script>
-
-
-<script> 
-    function compara_senha(){
-        var var_id_text_usuario = id_text_usuario.value;
-        var var_text_senha = id_text_senha.value;
-        var var_text_confirmarsenha = id_text_confirmarsenha.value;
-     
-        if(var_text_senha != var_text_confirmarsenha){
-            alert('As senhas estão diferentes');
-        return false;
-        
-        }else{
-            var resultado = confirm("Confirmar a alteração?");
-        if (resultado ==false){ 
-            return false;    
-            }    
-        }   
-     }
-</script>
- <!-- //================Inicio do Container  2 Botao Confirmar Cadastro e texto Usuario Texto-->
- 
+ <!-- //================Inicio do Container  2 Botao Confirmar Cadastro e texto Usuario Texto--> 
 <div class="container teste-menu1 tamanho " style="margin-top: 160px;"> 
     <div class="row mt-3">
         <div class=" col-12 ">      
             <h4 >Editar Usuário</h4>
           
  <!-- =======INICIO FORM campos USUARIO - SENHA - BOTAO ================================================ -->      
-                <form action="?p=editar_final"   method="post"  onsubmit="return compara_senha()">
-
+                <form action="?p=editar_final" id="formulario2"   method="post"  onsubmit="return compara_senha3()">
                     <div class="form-group">
                         <input type="text" id="id_text_usuario" name="text_usuario"class="form-control" value="<?php echo $usuario[0]['usuario'] ?>" placeholder="Usuario" required autofocus>
                     </div>
@@ -96,9 +51,14 @@
                         <input type="hidden" name="id_usuario" value="<?php echo $editar ?>">
                         <input  type="submit"  value="Confirmar Alterações" class="btn btn-primary" >
                         <p><a href="index.php?p=buscar_usuarios">Voltar</a></p> 
-                    </div>        
+                    </div>
+                    <!-- recebera o botao do cliquei2 - 4 -->
+                    <div id="var_aqui3" class="text-center margem_botao3 "></div>
+                    <div id="var_aqui4" class="text-center margem_botao4"></div>
+                    <div id="var_aquis" class="text-center margem_botao4"></div>         
                  </form>
    <!-- =======FIM FORM botao_entrar ================================================ -->               
         </div>
+        <br>
     </div>
 </div>

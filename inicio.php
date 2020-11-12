@@ -1,6 +1,6 @@
 
-
-<div id="carouselExampleControls" class="carousel slide teste-menu1 " data-ride="carousel" style="margin-top: 100px;">
+<br><br><br><br>
+<div id="carouselExampleControls" class="carrousel_posicao carousel slide teste-menu1 " data-ride="carousel" style="margin-top: 100px;">
   <div class="carousel-inner">
     <div class="carousel-item active slide-1">
       <h1>Slide1</h1>

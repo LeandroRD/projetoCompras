@@ -1,3 +1,4 @@
+
 <?php
       use PHPMailer\PHPMailer\PHPMailer;
       use PHPMailer\PHPMailer\SMTP;
@@ -35,10 +36,10 @@
 
           $mail->send();
 
-          echo'<div class="container" style="margin-top: 2px;position: absolute;margin-left: 70px;">
+          echo'<div class="container marg-email  marg-index2 "   >
                     <div class="row">
-                      <div class="offset-3 col-6 text-center">
-                        <div class="alert alert-danger objeto-apagado">E-mail enviado com sucesso </div>
+                      <div class="offset-3 col-6 text-center   ">
+                        <div class="alert alert-danger objeto-apagado   ">E-mail enviado com sucesso</div>
                         </div>
                     </div>
                 </div>';
@@ -47,4 +48,6 @@
       } catch (Exception $e) {
           echo "<div style='margin-top: 2px;position: absolute;'>Não foi possivel enviar o e-mail </div>";
       }
+      ?>
+      
 

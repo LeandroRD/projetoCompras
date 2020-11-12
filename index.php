@@ -4,12 +4,14 @@
 session_start();
 //incluindo teste 11:08
  include('layout/html_header.php');
+ 
  include('layout/nav.php');
 //  include('layout/nav.php');
  include('layout/user.php');
 //  include('layout/aviso-delete.php');
 
  //Rotas (routes) - roteamento - caso a query string estiver fazia
+ 
  $pag='inicio';
  $rodape=false;
 

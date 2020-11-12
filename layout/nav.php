@@ -1,7 +1,7 @@
 
 
- <div class="fixed-top " >
-  <nav class="navbar navbar-expand-lg navbar-light bg-light p-3 fixed-top  " style="position: relative;border: solid 5px  rgb(235, 225, 225); ">
+ <div class="fixed-top posicao_relativa " >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light p-3 fixed-top  " style="border: solid 5px  rgb(235, 225, 225); ">
           <a href="?p=inicio">
               <img src="assets/images/logo.png" >
           </a>
@@ -18,6 +18,9 @@
               </li>
               <li class="nav-item  ">
                   <h4><a class="nav-link ml-3 mr-3" href="?p=contatos_email">Contatos</a></h4>
+              </li>
+              <li class="nav-item  ">
+                  <h4><a class="nav-link ml-3 mr-3" href="?p=area_reservada">Log</a></h4>
               </li>
             </ul>
           </div>

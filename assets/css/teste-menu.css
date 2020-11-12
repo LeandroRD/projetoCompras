@@ -12,7 +12,7 @@
 
 .pos_absol_margtopo
     {
-        position: absolute;
+        position: relative;
         margin-top: 50px;
     }
 
@@ -27,8 +27,18 @@
     z-index: 0;
 }
 
+
+
+
+
 @media(min-width: 360px)and (max-width: 360px){
     
+
+.mintabelaagora
+{
+    width: 550px;
+}
+
     .minim-op
     {
         width: 500px;
@@ -36,13 +46,13 @@
 
     .minimo-buscar_tabela
     {
-        margin-left:100px
-
+     
+        width: 500px;
     }
 
     .minimo_tabela
     {
-        margin-left:-117px;
+        width: 400px;
     }
 
     .minimo_input
@@ -57,11 +67,24 @@
         width: 300PX;
     }
 
+    .tamanho_pequeno
+    {
+        width: 570px;
+    }
 
+   
 
 }
 
+.pos_absoloute
+{
+    position: absolute;
+}
 
+.pos_relativate
+{
+    position: relative;
+}
 
 
 
@@ -86,7 +109,7 @@
   }
 
 .teste-menu1{
-
+    
     z-index: 0;
 }
 
@@ -102,10 +125,17 @@
 
 .tamanho
 {
-    width: 470px;
+    width: 350px;
     height: 170px;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+
+.topo_contatos
+{
+    top: -100px;
 }
 
 
@@ -120,9 +150,94 @@
 
 .objeto-apagado
 {
-    animation: vai-apagar 4s;
+    animation: vai-apagar 7s;
     opacity: 0;
    
 }
+
+.marg-email
+{
+    /* width: 1000px; */
+    margin-top: 150px;
+    position: relative;
+    margin-bottom: -200px;
+    /* margin-left: 120px; */
+    
+}
+
+.marg-index2
+{
+    z-index: 2;
+}
+
+.marg-index1
+{
+    z-index: 1;
+}
+
+.margem_notopo
+{
+    top: 0px;
+}
+
+.barra_user
+{
+    top: 100px;
+    position: absolute;
+    width: 100% ;
+    z-index: 11;
+}
+
+.posicao_relativa
+{
+    position: relative;
+}
+
+.login_invalido
+{
+    z-index: 9;
+    width: 400px;
+    height: 50px;
+    /* background-color: green; */
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform:translate(-50%,-50%)
+    
+}
+
+.botao_email
+{
+    width: 320px;
+    left: 50%;
+    transform:translate(-50%,0%)
+}
+
+.area_reservada
+{
+    width: 300px;
+    left: 50%;
+    transform:translate(-50%,0%) 
+}
+
+.botao_reservado
+{
+    width: 300px;
+    left: 50%;
+    transform:translate(-50%,0%)
+}
+
+.carrousel_posicao
+{
+    top: -100px;
+}
+
+
+.topo_reservado
+{
+    top: -50px;
+}
+     
+
 
     

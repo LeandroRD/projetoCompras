@@ -61,8 +61,8 @@
     </div >
 
 
-
-<div class="container teste-menu1 tamanho ">
+<br><br><br><br>
+<div class="container teste-menu1 tamanho topo_contatos">
     <div class="row mt-3"  >
         <div class=" col-12"> 
              <div class="row"style="margin-bottom: 70px">
@@ -75,11 +75,11 @@
                             <input size="10" type="email" name="text_email"class="form-control" placeholder="Email" required>
                         </div>  
                          <!-- <div class="text-center"> -->
-                        <input  type="submit" value="Confirmar Cadastro" class="btn btn-primary margin-left: 0px" >
+                        <input  type="submit" value="Confirmar Cadastro" class="botao_email btn btn-primary margin-left: 100px" >
                 
                         <!-- </div> -->
                     <div class="topo-nav" style="padding-bottom: 80px;">
-                        <a href="?p=contatos" style="position: absolute; margin-top: 50px;margin-left:0px"  >Enviar e-mail</a>
+                        <a href="?p=contatos" style="position: absolute; margin-top: 50px;margin-left:0px"  >enviar e-mail</a>
                     </div>   
                   </form>
                </div>

@@ -2,10 +2,15 @@
 <!-- Se existe uma session com o User-->
  
 
-
-<div class="container teste-menu1 pos_absol ">
-    <div class="row mt-3">
-        <div class="offset-4 col-4">
+<br><br><br><br><br><br>
+<div class="container  posicao_relativa tamanho topo_reservado">
+    <div>
+    <?php if($erro): ?>
+                 <div class="alert alert-danger objeto-apagado text-center login_invalido" id="frase_erro">
+                     Login Inválido
+                 </div>
+                 <?php endif; ?>
+        <div class="area_reservada pos_absol " >
               <h2>Área Reservada</h2>
 
 
@@ -22,14 +27,10 @@
 
                   <div class="form-group text-center">
                     <!-- Para submeter dados desse form -->
-                      <input type="submit" value="Entrar"class="btn btn-outline-info">
+                      <input type="submit" value="Entrar"class="btn btn-outline-info botao_reservado">
                  </div>
                  <!-- 4a acao Se o $erro for verdadeiro -->
-                 <?php if($erro): ?>
-                 <div class="alert alert-primary text-center" id="frase_erro">
-                     Login Inválido
-                 </div>
-                 <?php endif; ?>
+                 
                  <!-- // Código JQUERY ligada frase_erro para sumir o alerta apos 2 segundos -->
                     <script>
                     $('#frase_erro').delay(2000).fadeOut('slow');
